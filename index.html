@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sofia Torrezam</title>
+
+    <meta name="description" content="Uma página feita para Sofia Torrezam.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="locked" data-birth="2003-05-27T18:15:00-03:00">
+
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <canvas id="stars" aria-hidden="true"></canvas>
+
+    <main class="experience">
+
+        <section class="section hero-section">
+
+            <div class="glass simple-hero">
+
+                <p class="counter-line">
+                    27 de Maio de 2003, às 18:15
+                </p>
+
+                <p class="counter-message">
+                    A data mais importante da minha vida
+                </p>
+
+                <div class="counter" id="counter">
+                    <p class="counter-line" id="timeAlive"></p>
+                </div>
+
+            </div>
+
+            <form class="password-card" id="passwordForm">
+
+                <label for="passwordInput">
+                    coloque a senha para continuar
+                </label>
+
+                <div class="password-row">
+                    <input
+                        type="password"
+                        id="passwordInput"
+                        placeholder="senha"
+                        autocomplete="off"
+                    >
+
+                    <button type="submit">
+                        entrar
+                    </button>
+                </div>
+
+                <p class="password-error" id="passwordError">
+                    senha errada
+                </p>
+
+            </form>
+
+        </section>
+
+        <section class="section memories-section" id="memories">
+
+            <div class="memory-container">
+
+                <p class="memory-title">
+                    Coisas que eu gosto em você
+                </p>
+
+                <article class="memory">
+                    <h2>✦ Seu Sorriso</h2>
+
+                    <p>
+                        Toda vez que você me vê, você sorri.
+                        eu acho isso a coisa mais linda do mundo.
+                    </p>
+                </article>
+
+                <article class="memory">
+                    <h2>✦ Seu Cheiro</h2>
+
+                    <p>
+                        O melhor cheiro do mundo.
+                        sempre que eu te abraço,
+                        eu fico te cheirando
+                        porque é bom demais.
+                    </p>
+                </article>
+
+                <article class="memory">
+                    <h2>✦ Seu Jeito</h2>
+
+                    <p>
+                        Você é a pessoa mais fofa,
+                        meiga e carinhosa que eu conheço.
+                        eu não mudaria nada em você.
+                    </p>
+                </article>
+
+                <article class="memory">
+                    <h2>✦ Sua Determinação</h2>
+
+                    <p>
+                        Você sempre faz o que precisa ser feito.
+                        você é ótima em tudo que faz
+                        e se esforça muito em tudo.
+                    </p>
+                </article>
+
+                <article class="memory">
+                    <h2>✦ Sua Inteligência</h2>
+
+                    <p>
+                        Você é muito inteligente.
+                        sempre pensa em tudo
+                        e resolve as coisas
+                        do melhor jeito possível.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="section polaroid-section">
+
+            <div class="polaroid-container">
+
+                <p class="polaroid-title">
+                    Algumas fotos nossas
+                </p>
+
+                <div class="polaroid-grid">
+
+                    <article class="polaroid favorite-photo">
+                        <img src="fotos/foto-favorita.jpeg" alt="Minha foto favorita">
+                        <p>Minha foto favorita</p>
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto1.jpeg" alt="Foto nossa">
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto2.jpeg" alt="Foto nossa">
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto3.jpeg" alt="Foto nossa">
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto4.jpeg" alt="Foto nossa">
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto5.jpeg" alt="Foto nossa">
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto6.jpeg" alt="Foto nossa">
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto7.jpeg" alt="Foto nossa">
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto8.jpeg" alt="Foto nossa">
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto9.jpeg" alt="Foto nossa">
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto11.jpeg" alt="Foto nossa">
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto12.jpeg" alt="Foto nossa">
+                    </article>
+
+                    <article class="polaroid">
+                        <img src="fotos/foto13.jpeg" alt="Foto nossa">
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+       <section class="section constellation-section" id="constellationGate">
+
+    <div class="constellation-box">
+
+        <h2 class="constellation-title">
+            Ligue as estrelas certas
+        </h2>
+
+        <p class="constellation-subtitle">
+            deslize o dedo pelas estrelas para formar a constelação
+        </p>
+
+        <div class="sky-map" id="skyMap">
+
+            <svg class="constellation-lines" id="constellationLines"></svg>
+
+            <!-- estrelas certas -->
+            <button class="star-point" data-star="s1" style="top: 16%; left: 30%;" aria-label="estrela"></button>
+            <button class="star-point" data-star="s2" style="top: 30%; left: 18%;" aria-label="estrela"></button>
+            <button class="star-point" data-star="s3" style="top: 54%; left: 30%;" aria-label="estrela"></button>
+            <button class="star-point" data-star="s4" style="top: 28%; left: 63%;" aria-label="estrela"></button>
+            <button class="star-point" data-star="s5" style="top: 54%; left: 72%;" aria-label="estrela"></button>
+            <button class="star-point" data-star="s6" style="top: 68%; left: 47%;" aria-label="estrela"></button>
+
+            <!-- estrelas falsas -->
+            <button class="star-point small-star" data-star="e1" style="top: 10%; left: 12%;" aria-label="estrela"></button>
+            <button class="star-point small-star" data-star="e2" style="top: 12%; left: 52%;" aria-label="estrela"></button>
+            <button class="star-point small-star" data-star="e3" style="top: 14%; left: 82%;" aria-label="estrela"></button>
+            <button class="star-point small-star" data-star="e4" style="top: 24%; left: 76%;" aria-label="estrela"></button>
+            <button class="star-point small-star" data-star="e5" style="top: 36%; left: 8%;" aria-label="estrela"></button>
+            <button class="star-point small-star" data-star="e6" style="top: 38%; left: 55%;" aria-label="estrela"></button>
+            <button class="star-point small-star" data-star="e7" style="top: 48%; left: 24%;" aria-label="estrela"></button>
+            <button class="star-point small-star" data-star="e8" style="top: 50%; left: 88%;" aria-label="estrela"></button>
+            <button class="star-point small-star" data-star="e9" style="top: 60%; left: 14%;" aria-label="estrela"></button>
+            <button class="star-point small-star" data-star="e10" style="top: 64%; left: 63%;" aria-label="estrela"></button>
+            <button class="star-point small-star" data-star="e11" style="top: 78%; left: 26%;" aria-label="estrela"></button>
+            <button class="star-point small-star" data-star="e12" style="top: 80%; left: 78%;" aria-label="estrela"></button>
+
+        </div>
+
+        <div class="constellation-actions">
+            <button type="button" class="hint-button" id="hintButton">
+                Dica
+            </button>
+
+            <p class="hint-text hidden" id="hintText">
+                Olha no seu braço
+            </p>
+        </div>
+
+        <p class="constellation-message" id="constellationMessage">
+            Tente ligar as estrelas certas
+        </p>
+
+        <p class="constellation-success" id="constellationSuccess">
+            Agora você pode continuar ✦
+        </p>
+
+    </div>
+
+</section>
+
+        <section class="section final-section">
+
+            <div class="final" id="final">
+
+                <p class="final-small">
+                    no fim, só existe uma certeza:
+                </p>
+
+                <h2>
+                    obrigado por existir
+                </h2>
+
+                <p>
+                    feliz aniversário, Sofia ✦
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
